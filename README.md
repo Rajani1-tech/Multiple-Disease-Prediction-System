@@ -40,12 +40,12 @@ cd Multiple-Disease-Prediction
 python -m venv disease-prediction-env
 source disease-prediction-env/bin/activate   # Linux / macOS
 # For Windows:
-# disease-prediction-env\Scripts\activate
+ disease-prediction-env\Scripts\activate
 ```
-3. Install Dependencies
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
-5. Run the Streamlit App
+### 5. Run the Streamlit App
  ```bash  
 streamlit run app.py
