@@ -1,50 +1,49 @@
-# Heart Disease Prediction  
+# Multiple Disease Prediction System
 
-## Overview  
-This project implements a heart disease prediction model using Logistic Regression. The model is trained on a dataset sourced from Kaggle, which contains patient health records with various medical attributes.  
+## Overview
+The Multiple Disease Prediction System is a machine learning–based web application developed using **Streamlit**.  
+It predicts the risk of **Heart Disease** and **Diabetes** based on medical inputs provided by the user.
 
-## Dataset  
-The dataset includes various medical features related to heart health.  
+The application stores user prediction history in a **SQLite database** and generates an alert if diabetes is predicted more than three times, advising the user to consult a nearby healthcare facility.
 
-### Attribute Information  
-- **AGE**: Age in years  
-- **SEX**: (1 = male; 0 = female)  
-- **CP (Chest Pain Type)**:  
-  - 0: Typical angina (most serious)  
-  - 1: Atypical angina  
-  - 2: Non-anginal pain  
-  - 3: Asymptomatic (least serious)  
-- **TRESTBPS**: Resting blood pressure (in mm Hg on admission to the hospital)  
-- **CHOL**: Serum cholesterol in mg/dl  
-- **FBS**: (Fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)  
-  - A fasting blood sugar level less than 100 mg/dL is normal.  
-  - From 100 to 120 mg/dL is considered prediabetes.  
-  - If it is 125 mg/dL or higher on two separate tests, it indicates diabetes.  
-- **RESTECG (Resting Electrocardiographic Results)**:  
-  - 0: Normal  
-  - 1: ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)  
-  - 2: Probable or definite left ventricular hypertrophy by Estes' criteria  
-- **THALACH**: Maximum heart rate achieved  
-- **EXANG**: Exercise-induced angina (1 = yes; 0 = no)  
-- **OLDPEAK**: ST depression induced by exercise relative to rest  
-- **SLOPE (The slope of the peak exercise ST segment)**:  
-  - 0: Upsloping  
-  - 1: Flat  
-  - 2: Downsloping  
-- **CA**: Number of major vessels (0-3) colored by fluoroscopy  
-- **THAL**:  
-  - 3 = Normal  
-  - 6 = Fixed defect  
-  - 7 = Reversible defect  
-- **TARGET (Diagnosis of heart disease - angiographic disease status)**:  
-  - 0: < 50% diameter narrowing (No heart disease)  
-  - 1: > 50% diameter narrowing (Heart disease present)  
+---
 
-## Model  
-- **Algorithm:** Logistic Regression  
-- **Accuracy:** 80%  
+## Features
+- Heart Disease Prediction using **Logistic Regression**  
+- Diabetes Prediction using a **custom Decision Tree**  
+- SQLite database for storing prediction history  
+- Alert system for repeated diabetes prediction  
+- Interactive and user-friendly Streamlit interface  
 
-## Installation  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/asmriti/Multiple-Disease-Prediction.git
+---
+
+## Technology Stack
+- **Language:** Python  
+- **Frontend:** Streamlit  
+- **Machine Learning:** Custom Decision Tree & Logistic Regression  
+- **Database:** SQLite  
+- **Libraries:** NumPy, Pandas  
+
+---
+
+## How to Run
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/asmriti/Multiple-Disease-Prediction.git
+cd Multiple-Disease-Prediction
+
+### 2. Setup Environment, Install Dependencies & Run App
+`
+
+# Create and activate virtual environment
+python -m venv disease-prediction-env
+source disease-prediction-env/bin/activate   # Linux / macOS
+# For Windows:
+# disease-prediction-env\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the Streamlit app
+streamlit run app.py
