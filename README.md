@@ -33,17 +33,19 @@ The application stores user prediction history in a **SQLite database** and gene
 git clone https://github.com/asmriti/Multiple-Disease-Prediction.git
 cd Multiple-Disease-Prediction
 
-### 2. Setup Environment, Install Dependencies & Run App
-`
+```
 
-# Create and activate virtual environment
+### 2.  Create and Activate Virtual Environment
+```bash
 python -m venv disease-prediction-env
 source disease-prediction-env/bin/activate   # Linux / macOS
 # For Windows:
 # disease-prediction-env\Scripts\activate
-
-# Install dependencies
+```
+3. Install Dependencies
+```bash
 pip install -r requirements.txt
-
-# Run the Streamlit app
+```
+5. Run the Streamlit App
+ ```bash  
 streamlit run app.py
